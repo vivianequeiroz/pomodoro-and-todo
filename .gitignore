@@ -1,6 +1,8 @@
 package-lock.json
 tslint.json
 .editorconfig
+angular.json
+tsconfig.json
 # compiled output
 /dist
 /tmp
