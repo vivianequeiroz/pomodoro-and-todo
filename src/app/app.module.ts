@@ -2,17 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { InitialHomeComponent } from './components/initial-home/initial.component';
+import { PomodoroCountdownComponent } from './components/pomodoro-coutdown/pomodoro-countdown';
+import { WorkTimer } from 'src/app/modules/pomodoro-modules/work-timer';
+import { WorkTimerService } from './services/pomodoro-services/work-timer.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InitialHomeComponent,
+    PomodoroCountdownComponent,
   ],
   imports: [
     BrowserModule,
   ],
-  providers: [],
+  providers: [
+    WorkTimer,
+    WorkTimerService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
