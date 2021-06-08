@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkTimerService } from 'src/app/services/pomodoro-services/work-timer.service';
-
+import { RestTimerService } from 'src/app/services/pomodoro-services/rest-timer.service';
 @Component({
   selector: 'app-pomodoro-countdown',
   templateUrl: './pomodoro-countdown.component.html',
@@ -8,19 +7,12 @@ import { WorkTimerService } from 'src/app/services/pomodoro-services/work-timer.
 })
 export class PomodoroCountdownComponent implements OnInit {
 
-  sec : number;
-  min : number;
-
   constructor(
-    private workTimerService : WorkTimerService,
+    private rest : RestTimerService,
   ) {}
 
   ngOnInit(): void {
-    this.initWorkTimer();
+    this.rest.restTimer();
   }
-  
-  initWorkTimer(): void {
-    this.workTimerService.workTimerSeconds(this.sec);
-    this.workTimerService.workTimerMinutes(this.min);
-  }
+
 }
