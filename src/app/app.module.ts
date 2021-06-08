@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PomodoroCountdownComponent } from './components/pomodoro-coutdown/pomodoro-countdown';
-import { WorkTimer } from 'src/app/modules/pomodoro-modules/work-timer';
 import { WorkTimerService } from './services/pomodoro-services/work-timer.service';
+import { RestTimerService } from './services/pomodoro-services/rest-timer.service';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +16,8 @@ import { WorkTimerService } from './services/pomodoro-services/work-timer.servic
     BrowserModule,
   ],
   providers: [
-    WorkTimer,
     WorkTimerService,
+    RestTimerService
   ],
   bootstrap: [AppComponent]
 })
