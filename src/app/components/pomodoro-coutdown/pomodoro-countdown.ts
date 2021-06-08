@@ -1,18 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { RestTimerService } from 'src/app/services/pomodoro-services/rest-timer.service';
+import { Component, OnInit,OnDestroy } from "@angular/core";
+import { timer, Subscription } from "rxjs";
 @Component({
-  selector: 'app-pomodoro-countdown',
-  templateUrl: './pomodoro-countdown.component.html',
-  styleUrls: ['./pomodoro-countdown.component.css']
+  selector: "app-pomodoro-countdown",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class PomodoroCountdownComponent implements OnInit {
+export class PomodoroCountdownComponent implements OnInit, OnDestroy {
 
-  constructor(
-    private rest : RestTimerService,
-  ) {}
+  countDown: Subscription;
+  
+  counter = 1800;
+  tick = 1000;
 
-  ngOnInit(): void {
-    this.rest.restTimer();
+  ngOnInit() {
+    this.countDown = timer(0, this.tick)
+      .subscribe(() => --this.counter);
   }
-
+  ngOnDestroy(){
+    this.countDown = null;
+  }
 }
+
