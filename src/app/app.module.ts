@@ -7,11 +7,14 @@ import { WorkTimerService } from './services/pomodoro-services/work-timer.servic
 import { RestTimerService } from './services/pomodoro-services/rest-timer.service';
 import { FormatTimePipe } from './pipes/format-time.pipe';
 import { FormsModule } from '@angular/forms';
+import { PomodoroWorkComponent } from './components/pomodoro-work/pomodoro-work.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     PomodoroRestComponent,
     FormatTimePipe,
+    PomodoroWorkComponent,
   ],
   imports: [
     BrowserModule,
