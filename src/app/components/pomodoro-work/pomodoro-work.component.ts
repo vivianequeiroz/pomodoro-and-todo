@@ -8,23 +8,21 @@ import { Subscription, timer } from 'rxjs';
 })
 export class PomodoroWorkComponent implements OnInit, OnDestroy {
 
-  workTimer: Subscription;
+  countDown: Subscription;
 
-  counter = 41; // in seconds
+  counter = 30; // in seconds
   tick = 1000;
 
   ngOnInit() {
-    console.log('workTimer')
-    this.workTimer = timer(0, this.tick)
+    this.countDown = timer(0, this.tick)
       .subscribe(() => { 
       if(this.counter > 0) 
         --this.counter
       else 
         this.ngOnDestroy();
       });
-      
   }
   ngOnDestroy(){
-      this.workTimer = null;
+      this.countDown = null;
   }
 }
