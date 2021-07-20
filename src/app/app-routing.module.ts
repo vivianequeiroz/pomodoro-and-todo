@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PomodoroRestComponent } from './components/pomodoro-rest/pomodoro-rest.component';
-import { PomodoroWorkComponent } from './components/pomodoro-work/pomodoro-work.component';
 
-const routes: Routes = [
-  { path: 'rest', component: PomodoroRestComponent },
-  { path: 'work', component: PomodoroWorkComponent }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
