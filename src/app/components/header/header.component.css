@@ -24,7 +24,7 @@
   float: right;
 }
 
-@media screen and (max-width: 31.25) {
+@media screen and (max-width: 31.25rem) {
   .header-menu a {
     float: none;
     display: block;
