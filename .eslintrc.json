@@ -11,7 +11,8 @@
       "parserOptions": {
         "project": [
           "tsconfig.json",
-          "e2e/tsconfig.json"
+          "e2e/tsconfig.json",
+          "experimentalDecorators"
         ],
         "createDefaultProgram": true
       },

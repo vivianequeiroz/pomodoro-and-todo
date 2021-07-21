@@ -1,8 +1,7 @@
 .header {
   overflow: hidden;
-  background-color: #000;
   padding: 1.875rem 2.813rem;
-  height: 12.5rem;
+  height: 11rem;
 }
 
 .header a {
@@ -11,8 +10,8 @@
 }
 
 .header img {
-  height: 2.8rem;
-  width: 2.8rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .header-logo img {
@@ -25,12 +24,15 @@
 }
 
 @media screen and (max-width: 31.25rem) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
   .header-menu a {
     float: none;
-    display: block;
-    text-align: left;
   }
-  .header-logo {
-    float: none;
+  .header-logo img {
+    height: 6rem;
+    width: 10rem;
+    float: right;
   }
 }
