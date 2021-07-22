@@ -3,6 +3,11 @@
   border: 0;
   padding:0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1E1E1E;
 }
 
 body {
@@ -10,5 +15,25 @@ body {
   font-size: 1rem;
   color: #fff;
   box-sizing: border-box; 
+}
+
+@font-face {
+  font-family: poppins-light;
+  src: url(src/app/assets/fonts/Poppins/Poppins-Light.ttf);
+
+  font-family: poppins-italic;
+  src: url(src/app/assets/fonts/Poppins/Poppins-Italic.ttf);
+
+  font-family: poppins-extralight;
+  src: url(src/app/assets/fonts/Poppins/Poppins-ExtraLight.ttf);
+
+  font-family: poppins-bold;
+  src: url(src/app/assets/fonts/Poppins/Poppins-ExtraBold.ttf);
+
+  font-family: poppins-bold;
+  src: url(src/app/assets/fonts/Poppins/Poppins-Bold.ttf);
+
+  font-family: poppins-black;
+  src: url(src/app/assets/fonts/Poppins/Poppins-Bold.ttf);
 }
 

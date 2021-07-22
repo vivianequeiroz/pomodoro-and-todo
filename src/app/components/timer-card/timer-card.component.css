@@ -1,0 +1,110 @@
+.main-container {
+  overflow: hidden;
+  height: 100vh;
+ /*display: flex*/
+}
+
+.card-container {
+  width: 40.625rem;
+  height: 25rem;
+  perspective: 62.5rem;
+  margin: 12.5rem auto;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* #TODO: Change for user click later */
+.card-container:hover .card-inner {
+  transform: rotateX(180deg);
+}
+
+.card-back {
+  background-color: #5A5A5A;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.card-front {
+  background-color: #5A5A5A;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  border-radius: .625rem;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  padding: 1.25rem;
+}
+
+.config-icon {
+  float: right;
+  height: 1.875rem;
+  width: 1.875rem 1.875rem;
+}
+
+.task-name p {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-family: 'PoppinsLight', sans-serif;
+}
+
+.task-name p::after {
+  content: "";
+  display: inline-flex;
+  margin: 0 auto;
+  width: 90%;
+  border-bottom: 2px solid #8E8E8E;
+  padding: .5rem;
+}
+
+.text-timer {
+  width: 100%;
+  height: 5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.text-timer p {
+  font-family: poppins-light, sans-serif;
+  font-size: 9rem;
+  margin: 0 auto;
+}
+
+.timer-buttons {
+  display: inline-flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 2.5rem;
+}
+
+.button {
+  background-color: transparent;
+  border: .085rem solid #FFF;
+  border-radius: .5rem;
+  width: 5em; 
+  height: 3.4rem;
+  font-size: 1.35rem;
+  color: #FFF;
+}
+
+@media screen and (max-width: 43.75rem) {
+  .card-container {
+    margin: 0 auto;
+  }
+  .card {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
