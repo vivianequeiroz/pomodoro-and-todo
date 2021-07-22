@@ -51,14 +51,14 @@
   width: 1.875rem 1.875rem;
 }
 
-.task-name p {
+.front-task-name p {
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
   text-align: center;
   font-family: 'PoppinsLight', sans-serif;
 }
 
-.task-name p::after {
+.front-task-name p::after {
   content: "";
   display: inline-flex;
   margin: 0 auto;
@@ -67,20 +67,20 @@
   padding: .5rem;
 }
 
-.text-timer {
+.front-text-timer {
   width: 100%;
   height: 5rem;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
-.text-timer p {
+.front-text-timer p {
   font-family: poppins-light, sans-serif;
   font-size: 9rem;
   margin: 0 auto;
 }
 
-.timer-buttons {
+.front-timer-buttons {
   display: inline-flex;
   margin: 0 auto;
   flex-direction: row;
@@ -89,7 +89,7 @@
   margin-top: 2.5rem;
 }
 
-.button {
+.front-button {
   background-color: transparent;
   border: .085rem solid #FFF;
   border-radius: .5rem;
