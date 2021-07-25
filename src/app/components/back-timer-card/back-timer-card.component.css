@@ -19,3 +19,9 @@
   height: 1.875rem;
   width: 1.875rem 1.875rem;
 }
+
+@media screen and (max-width: 43.75rem) {
+  .column {
+    width: 100%;
+  }
+}
