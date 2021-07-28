@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FrontTimerCardComponent } from '../front-timer-card/front-timer-card.component';
-import { BackTimerCardComponent } from '../back-timer-card/back-timer-card.component';
+import { TimerCardComponent } from './timer-card.component';
 
 @NgModule({
-  declarations: [FrontTimerCardComponent, BackTimerCardComponent],
+  declarations: [TimerCardComponent],
   imports: [CommonModule],
-  exports: [FrontTimerCardComponent, BackTimerCardComponent],
+  exports: [TimerCardComponent],
 })
 export class TimerCardModule {}
